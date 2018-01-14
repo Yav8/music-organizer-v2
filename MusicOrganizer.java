@@ -82,4 +82,13 @@ public class MusicOrganizer
     {
         player.stop();
     }
+    
+    /**
+     * Imprime por pantalla todos los nombres de archivos.
+     */
+    public void listAllFiles() {
+        for(String filename : files) {
+            System.out.println(filename);
+        }
+    }
 }
