@@ -116,4 +116,16 @@ public class MusicOrganizer
             System.out.println("Error: no hay nombres de archivos que contengan el texto que acaba de introducir.");
         }
     }
+
+    /**
+     * Reproduce el comienzo de las canciones cuyo nombre contenga 
+     * el texto introducido por el usuario.
+     */
+    public void reproducirMuestrasDeCancionesDeUnArtistaEspecifico(String artista) {
+        for(String filename : files) {
+            if(filename.contains(artista)) {
+                player.playSample(filename);
+            }
+        }  
+    }
 }
