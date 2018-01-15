@@ -98,13 +98,22 @@ public class MusicOrganizer
 
     /**
      * Imprime por pantalla los nombres de archivos que contengan
-     * el texto introducido por parámetro.
+     * el texto introducido por parámetro. Si no hubiera nombres
+     * de archivo que contuvieran dicho texto, entonces mostraría
+     * un mensaje de error.
      */
     public void listMatching(String searchString) {
+        boolean hayCoincidencia = false;
+
         for(String filename : files) {
             if(filename.contains(searchString)) {
                 System.out.println(filename);
+                hayCoincidencia = true;
             }
+        }
+
+        if(hayCoincidencia == false) {
+            System.out.println("Error: no hay nombres de archivos que contengan el texto que acaba de introducir.");
         }
     }
 }
